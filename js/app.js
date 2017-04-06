@@ -1,6 +1,7 @@
 (function() {
-	var notes = JSON.parse(localStorage.getItem("notes"));
-	var id = localStorage.getItem("noteid");
+	var notes = JSON.parse(localStorage.getItem("notes")) || {title: "Click here to change the content",
+	content: "Sample Content", name: "note1"};
+	var id = localStorage.getItem("noteid") || 2;
 
 	function getColumn() {
 		var parent = document.getElementsByClassName("row")[0];
