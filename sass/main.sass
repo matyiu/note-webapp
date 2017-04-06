@@ -1,0 +1,142 @@
+$main-color: #2ee66d
+$body-background: #d9d9d9
+$note-background: #ffffff
+$main-text: #3c3c3c
+$separator: #333333
+$remove-btn: #ea2d2a
+
+\:root
+	font-size: 16px
+
+html
+	position: relative
+	min-height: 100%
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+body
+	background: $body-background
+	font-family: "Open Sans", sans-serif
+
+#addNote
+	width: 75px
+	height: 75px
+	position: fixed
+	top: 0
+	left: 0
+	padding: 0
+	font-size: 2.5rem
+
+.btn
+	background: $main-color
+	color: $note-background
+	text-decoration: none
+	font-size: 1rem
+	outline: none
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+
+#notes
+	margin: 40px 0 80px
+
+	.container
+		width: 94%
+		max-width: 1080px
+		margin: 0 auto
+
+		.row
+			display: flex
+			flex-direction: row
+			flex-wrap: no-wrap
+			justify-content: space-between
+
+		.col-1
+			width: 30.555555555%
+			max-width: 330px
+
+			.note
+				width: 100%
+				padding: 20px 10px
+				background: $note-background
+				margin-bottom: 25px
+				color: $main-text
+				box-shadow: 0 0 10px 1px darken($body-background, 15%)
+				position: relative
+	
+				.title, .content
+					white-space: pre-wrap
+					overflow: hidden
+					overflow-wrap: break-word
+
+				.title
+					width: 100%
+					text-align: center
+					font-size: 2rem
+					font-weight: 700
+					font-family: "Open Sans", sans-serif
+					border: none
+					border-bottom: 4px solid $separator
+					margin-bottom: 20px
+					display: block
+
+				.content
+					width: 100%
+					text-align: justify
+					font-size: 0.96rem
+					font-family: "Open Sans", sans-serif
+					border: none
+					display: block
+
+				textarea.title, textarea.content
+					background: inherit
+					color: inherit
+					resize: none
+					display: none
+
+				.btn
+					width: 40px
+					height: 40px
+					border-radius: 50%
+					border: 1px solid $main-color
+					font-size: 1.5rem
+					position: absolute
+					right: -15px
+					bottom: -15px
+					transition: background 0.3s ease-in-out, color 0.3s ease-in-out
+
+					&:hover
+						background: $note-background
+						color: $main-color
+
+				.save
+					display: none
+
+				.remove
+					border-color: $remove-btn
+					background: $remove-btn
+
+					&:hover
+						color: $remove-btn
+
+
+#copy
+	width: 100%
+	background: $main-color
+	text-align: center
+	padding: 20px 0
+	color: $note-background
+	font-size: 1.1rem
+	position: absolute
+	bottom: 0
+	left: 0
+
+@keyframes newNote
+	0%
+		transform: scale(0.1)
+	100%
+		transform: scale(1)

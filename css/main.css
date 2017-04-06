@@ -1,0 +1,147 @@
+:root {
+  font-size: 16px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #d9d9d9;
+  font-family: "Open Sans", sans-serif;
+}
+
+#addNote {
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  font-size: 2.5rem;
+}
+
+.btn {
+  background: #2ee66d;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#notes {
+  margin: 40px 0 80px;
+}
+#notes .container {
+  width: 94%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+#notes .container .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+}
+#notes .container .col-1 {
+  width: 30.55556%;
+  max-width: 330px;
+}
+#notes .container .col-1 .note {
+  width: 100%;
+  padding: 20px 10px;
+  background: #ffffff;
+  margin-bottom: 25px;
+  color: #3c3c3c;
+  box-shadow: 0 0 10px 1px #b3b3b3;
+  position: relative;
+}
+#notes .container .col-1 .note .title, #notes .container .col-1 .note .content {
+  white-space: pre-wrap;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+#notes .container .col-1 .note .title {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  border-bottom: 4px solid #333333;
+  margin-bottom: 20px;
+  display: block;
+}
+#notes .container .col-1 .note .content {
+  width: 100%;
+  text-align: justify;
+  font-size: 0.96rem;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  display: block;
+}
+#notes .container .col-1 .note textarea.title, #notes .container .col-1 .note textarea.content {
+  background: inherit;
+  color: inherit;
+  resize: none;
+  display: none;
+}
+#notes .container .col-1 .note .btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #2ee66d;
+  font-size: 1.5rem;
+  position: absolute;
+  right: -15px;
+  bottom: -15px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+#notes .container .col-1 .note .btn:hover {
+  background: #ffffff;
+  color: #2ee66d;
+}
+#notes .container .col-1 .note .save {
+  display: none;
+}
+#notes .container .col-1 .note .remove {
+  border-color: #ea2d2a;
+  background: #ea2d2a;
+}
+#notes .container .col-1 .note .remove:hover {
+  color: #ea2d2a;
+}
+
+#copy {
+  width: 100%;
+  background: #2ee66d;
+  text-align: center;
+  padding: 20px 0;
+  color: #ffffff;
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes newNote {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
