@@ -47,7 +47,8 @@
 		localStorage.setItem("notes", JSON.stringify(notes));
 	}
 
-	function finishEdit(name) {
+	function finishEdit(name, e) {
+		e.preventDefault();
 		var note = this.parentNode;
 		var noteTitle = note.querySelector("h2");
 		var noteContent = note.querySelector("p");
@@ -103,7 +104,8 @@
 		}
 	}
 
-	function removeNote() {
+	function removeNote(e) {
+		e.preventDefault();
 		var note = this.parentNode;
 		var parentNote = note.parentNode;
 
