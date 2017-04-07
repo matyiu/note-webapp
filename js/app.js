@@ -74,7 +74,6 @@
 	}
 
 	function editNote(removeBtn, inputTitle, inputContent, saveBtn, name) {
-		console.log(this);
 		this.style.display = "none";
 		removeBtn.style.display = "none";
 		inputTitle.style.display = "block";
@@ -133,7 +132,9 @@
 		var inputTitle = createNoteElement("textarea", "title", title);
 		var inputContent = createNoteElement("textarea", "content", content);
 		inputTitle.addEventListener("keyup", autoHeight);
+		inputTitle.addEventListener("keydown", autoHeight);
 		inputContent.addEventListener("keyup", autoHeight);
+		inputContent.addEventListener("keydown", autoHeight);
 
 		var removeBtn = createNoteElement("a", "btn remove");
 		var removeIcon = createNoteElement("span", "fa fa-remove");
