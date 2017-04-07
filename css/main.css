@@ -27,7 +27,14 @@ body {
   padding: 0;
   font-size: 2.5rem;
 }
-
+@media(max-width: 1230px) {
+  #addNote {
+    position: static;
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
+  }
+}
 .btn {
   background: #2ee66d;
   color: #ffffff;
@@ -54,9 +61,21 @@ body {
   flex-wrap: no-wrap;
   justify-content: space-between;
 }
+@media(max-width: 1024px) {
+  #notes .container .row {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 #notes .container .col-1 {
   width: 30.55556%;
   max-width: 330px;
+}
+@media(max-width: 1024px) {
+  #notes .container .col-1 {
+    width: 100%;
+    max-width: 600px;
+  }
 }
 #notes .container .col-1 .note {
   width: 100%;
@@ -91,6 +110,11 @@ body {
   border: none;
   display: block;
 }
+@media(max-width: 670px) {
+  #notes .container .col-1 .note .content {
+    margin-bottom: 40px;
+  }
+}
 #notes .container .col-1 .note textarea.title, #notes .container .col-1 .note textarea.content {
   background: inherit;
   color: inherit;
@@ -111,6 +135,16 @@ body {
 #notes .container .col-1 .note .btn:hover {
   background: #ffffff;
   color: #2ee66d;
+}
+@media(max-width: 670px) {
+  #notes .container .col-1 .note .btn {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    border-radius: 0;
+  }
 }
 #notes .container .col-1 .note .save {
   display: none;
